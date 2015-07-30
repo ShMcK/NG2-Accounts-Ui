@@ -1,4 +1,4 @@
-import {Component, View, bootstrap} from 'angular2/angular2';
+import {Component, View, bootstrap, Inject} from 'angular2/angular2';
 import {NgSwitch, NgSwitchDefault, NgSwitchWhen, NgIf} from 'angular2/angular2';
 
 // Components
@@ -7,8 +7,11 @@ import {AccountsRegister} from 'client/components/register/register';
 import {AccountsForgotPassword} from 'client/components/forgot-password/forgot-password';
 import {AccountsProfile} from 'client/components/profile/profile';
 
+import {Modal} from 'client/lib/js-modal/js-modal';
+
 @Component({
   selector: 'accounts-ui'
+  //appInjector: [Modal]
 })
 @View({
   templateUrl: 'client/accounts-ui.ng.html',
@@ -28,9 +31,15 @@ class AccountsUi {
    */
   open(target:string) {
     this.page = target;
+  }
 
-    // open modal
 
+  // work in progress
+  openDialog(target:string) {
+    console.log(target, ' called');
+    Modal.open({
+      content: `<p>Some content</p>`
+    });
   }
 
   /**

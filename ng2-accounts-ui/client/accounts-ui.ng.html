@@ -3,8 +3,6 @@
   <button (click)="open('register')">Sign up</button>
 </div>
 
-<!--<accounts-profile></accounts-profile>-->
-
 <!-- login | register | forgot-password -->
 <section [ng-switch]="page" class="accounts-ui">
 
@@ -20,6 +18,10 @@
     <accounts-forgot-password></accounts-forgot-password>
   </template>
 
+  <template [ng-switch-when]="'profile'">
+    <accounts-profile></accounts-profile>
+  </template>
+
   <div class="redirects" *ng-if="page">
     <p *ng-if="page !== 'login'">Already have an account? <a (click)="redirect('login')">Login here</a></p>
 
@@ -30,3 +32,7 @@
   </div>
 
 </section>
+
+<!-- currently not working -->
+<p>Modal currently not working</p>
+<button (click)="openDialog('accounts-login')">Open Login</button>

@@ -1,3 +1,5 @@
+declare var Modal;
+
 /**
  * Account Credentials passed into Meteor Account
  * https://www.meteor.com/accounts
@@ -13,7 +15,7 @@ interface IAccountCredentials {
  * http://docs.meteor.com/#/full/meteor_loginwithexternalservice
  */
 interface IAccountsOptions {
-  requestPermissions?: string[];
+  requestPermissions?: [string];
   loginStyle: string; // popup | redirect
 }
 

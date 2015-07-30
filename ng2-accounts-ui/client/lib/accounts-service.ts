@@ -84,9 +84,6 @@ export class AccountsService {
     }
   }
 
-,
-
-
   /**
    * Request a forgot password email.
    * http://docs.meteor.com/#/full/accounts_forgotpassword
