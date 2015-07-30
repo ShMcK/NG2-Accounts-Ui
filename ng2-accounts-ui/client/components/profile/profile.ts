@@ -1,6 +1,6 @@
 import {Component, View, NgIf} from 'angular2/angular2';
 import {formDirectives, ControlGroup, Control} from 'angular2/angular2';
-import {AccountsService} from 'client/accounts-ui/lib/accounts.service';
+import {AccountsService} from 'client/lib/accounts-service';
 import {Inject} from 'angular2/angular2';
 
 @Component({
@@ -8,7 +8,7 @@ import {Inject} from 'angular2/angular2';
   viewInjector: [AccountsService]
 })
 @View({
-  templateUrl: 'client/accounts-ui/components/profile/profile.ng.html',
+  templateUrl: 'client/components/profile/profile.ng.html',
   directives: [NgIf, formDirectives]
 })
 export class AccountsProfile {

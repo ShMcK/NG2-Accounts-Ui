@@ -1,7 +1,7 @@
 import {Component, View, NgFor} from 'angular2/angular2';
 import {formDirectives, Control, ControlGroup, Validators, NgFormControl} from 'angular2/angular2';
-import {SubmitButton} from 'client/accounts-ui/components/submit-button';
-import {AccountsService} from 'client/accounts-ui/lib/accounts.service';
+import {SubmitButton} from 'client/components/submit-button';
+import {AccountsService} from 'client/lib/accounts-service';
 import {Inject} from 'angular2/angular2';
 
 @Component({
@@ -9,7 +9,7 @@ import {Inject} from 'angular2/angular2';
   viewInjector: [AccountsService]
 })
 @View({
-  templateUrl: 'client/accounts-ui/components/forgot-password/forgot-password.ng.html',
+  templateUrl: 'client/components/forgot-password/forgot-password.ng.html',
   directives: [formDirectives, NgFor, SubmitButton]
 })
 export class AccountsForgotPassword {
