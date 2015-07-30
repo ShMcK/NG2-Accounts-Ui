@@ -17,21 +17,35 @@ Accounts Ui Component for use with Angular 2 & Meteor.js.
   - change password
 * Sign out
 
-## Required Packages
+## Meteor Package Setup
 
-    meteor-platform
+**Note: this is not a Blaze package, but rather an Angular 2 component**
+
+* Angular 2 setup
+
+    meteor add shmck:angular2
+    meteor add netanelgilad:angular2-typescript
+
+* Password setup:
+
+    meteor add accounts-password
     
-    # Angular 2
-    shmck:angular2
-    netanelgilad:angular2-typescript
+* Current OAuth setups:
+
+    meteor add accounts-facebook
+    meteor add accounts-twitter
+    meteor add accounts-google
     
-    # Accounts
-    accounts-password
-    accounts-facebook
-    accounts-twitter
-    accounts-google
+* Styles
     
-    # Styles
-    fourseven:scss
-    reywood:bootstrap3-sass
-    fortawesome:fontawesome
+    meteor add fourseven:scss
+    meteor add reywood:bootstrap3-sass
+    meteor add fortawesome:fontawesome
+
+## Customization
+
+* Edit form templates in `/client/components/*.ng.html`
+* Edit Sass styles in `/client/styles`
+* Edit Account settings in `client/lib/accounts.settings.ts`    
+ 
+    
