@@ -2,13 +2,6 @@ import {Component View, NgIf} from 'angular2/angular2';
 import {Inject} from 'angular2/angular2';
 import {AccountsService} from 'client/lib/accounts-service';
 
-/**
- * if processing: loader
- * if success: success
- * if error: error
- */
-
-
 @Component({
   selector: 'submit-button',
   viewInjector: [AccountsService]

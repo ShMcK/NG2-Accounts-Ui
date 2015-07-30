@@ -7,11 +7,8 @@ import {AccountsRegister} from 'client/components/register/register';
 import {AccountsForgotPassword} from 'client/components/forgot-password/forgot-password';
 import {AccountsProfile} from 'client/components/profile/profile';
 
-import {Modal} from 'client/lib/js-modal/js-modal';
-
 @Component({
   selector: 'accounts-ui'
-  //appInjector: [Modal]
 })
 @View({
   templateUrl: 'client/accounts-ui.ng.html',
@@ -20,9 +17,11 @@ import {Modal} from 'client/lib/js-modal/js-modal';
 })
 class AccountsUi {
   page:string;
+  accountsModalActive:boolean;
 
   constructor() {
     this.page = null;
+    this.accountsModalActive = false;
   }
 
   /**
@@ -33,14 +32,14 @@ class AccountsUi {
     this.page = target;
   }
 
+  openModal(event) {
+    //this.accountsModalActive = !this.accountsModalActive;
 
-  // work in progress
-  openDialog(target:string) {
-    console.log(target, ' called');
-    Modal.open({
-      content: `<p>Some content</p>`
-    });
+    // requires angular 2 modal.
+
+    event.preventDefault();
   }
+
 
   /**
    * Redirect form page
