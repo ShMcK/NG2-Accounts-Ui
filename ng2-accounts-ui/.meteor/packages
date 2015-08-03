@@ -15,8 +15,16 @@ accounts-password
 accounts-facebook
 accounts-twitter
 accounts-google
+service-configuration
+
 
 # Styles
 fourseven:scss
 reywood:bootstrap3-sass
 fortawesome:fontawesome
+
+
+# Email
+http
+email
+meteorhacks:ssr

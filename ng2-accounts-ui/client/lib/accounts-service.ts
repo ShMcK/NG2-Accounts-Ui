@@ -57,7 +57,7 @@ export class AccountsService {
    * Facebook, Twitter, Google, Github, Weibo, MeteorDevGroup, Meetup
    * @returns {Promise|Promise<T>}
    */
-  loginWith(social) {
+  loginWith(social:string) {
     this.processing = true;
     switch (social) {
       case 'facebook':
